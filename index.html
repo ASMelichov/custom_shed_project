@@ -1,0 +1,717 @@
+""""Head Section:
+
+Meta-tags for encoding, viewport settings, keywords, and description.
+Links to the site icon and Google Web Fonts.
+Links to external CSS for icons (Font Awesome, Bootstrap Icons) and libraries (animations, carousels, calendars).
+Body of the Document:
+
+Interface elements, including the top panel with contact information and links to terms of service and privacy policy, as well as social networks.
+Navigation bar with links to various sections of the site, including the homepage, services, projects, and contact information.
+Modal window for search.
+Image carousel with a description of the company's services.
+"About Us" section with information about the company and its experience.
+Services section with detailed descriptions of the offered services.
+Portfolio of projects with images and descriptions.
+Customer testimonials.
+Form for comments.
+Modal window for confirmation of comment submission.
+Blog with the latest articles.
+Footer with contact information, links, and a subscription form.
+Button for quick return to the top of the page.
+Integration of JavaScript libraries and the site's main script.""""
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Custom Shed/ Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/icons/icon-1.png" rel="icon" type="image/png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="lib/twentytwenty/twentytwenty.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
+        <img class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-1.png" alt="Icon">
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-3">
+                    <a class="text-body px-2" href="tel:+0000000"><i class="fa fa-phone-alt text-primary me-2"></i>+00000000</a>
+                    <a class="text-body px-2" href="contact@customshed.ie"><i class="fa fa-envelope-open text-primary me-2"></i>contact@customshed.ie</a>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-2">
+                    <a class="text-body px-2" href="">Terms</a>
+                    <a class="text-body px-2" href="">Privacy</a>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+    <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+        <h1 class="text-primary m-0"><img class="me-3" src="img/icons/icon-1.png" alt="Icon">Made in Ireland</h1>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" title="Toggle Navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Home</a>
+                <div class="dropdown-menu border-0 m-0">
+                    <a href="index.html" class="dropdown-item">Home</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Service</a>
+                <div class="dropdown-menu border-0 m-0">
+                    <a href="service-detail.html" class="dropdown-item">Service Detail</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Project</a>
+                <div class="dropdown-menu border-0 m-0">
+                    <a href="project.html" class="dropdown-item">Project</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <div class="dropdown-menu border-0 m-0">
+                    <a href="appointment.html" class="dropdown-item">Appointment</a>
+                    <a href="coming-soon.html" class="dropdown-item">Coming Soon</a>
+                    
+                </div>
+            </div>
+            <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+            <a href="#searchModal" class="nav-item nav-link" data-bs-toggle="modal"><i class="fa fa-search"></i></a>
+            <a href="#offcanvasRight" class="nav-item nav-link" data-bs-toggle="offcanvas" aria-controls="offcanvasRight" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+
+    <!-- Search Start -->
+<div class="modal fade" id="searchModal" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content" style="background: rgba(17, 9, 2, 0.5);">
+            <div class="modal-header border-0">
+                <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex align-items-center justify-content-center">
+                <div class="input-group" style="max-width: 600px;">
+                    <input type="text" class="form-control bg-transparent border-light p-3" placeholder="wooden shed ">
+                    <button class="btn btn-light px-4"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-sm-1.jpg'>">
+                <img class="img-fluid" src="img/carousel-2.jpg" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h1 class="display-1 text-white animated slideInDown">Excellence in Architecture and Interior Design </h1>
+                                <p class="fs-5 fw-medium text-white">We bring the highest quality, stylish design, and superior strength to each project.</p>
+                                <div class="d-flex align-items-center pt-4 animated slideInDown">
+                                    <a href="" class="btn btn-primary py-sm-3 px-3 px-sm-5 me-5">Read More</a>
+                                    <button type="button" class="btn-play" data-bs-toggle="modal"
+                                        data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                                        <span></span>
+                                    </button>
+                                    <h5 class="text-white m-0 ms-4 d-none d-sm-block">Watch Video</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-sm-2.jpg'>">
+                <img class="img-fluid" src="img/carousel-1.jpg" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h1 class="display-1 text-white animated slideInDown">Exterior Unique Painting Services</h1>
+                                    <p class="fs-5 fw-medium text-white">Crafting Exclusive Color Solutions for Your Products</p>
+
+
+                                <div class="d-flex align-items-center pt-4 animated slideInDown">
+                                    <a href="" class="btn btn-primary py-sm-3 px-3 px-sm-5 me-5">Read More</a>
+                                    <button type="button" class="btn-play" data-bs-toggle="modal"
+                                        data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                                        <span></span>
+                                    </button>
+                                    <h5 class="text-white m-0 ms-4 d-none d-sm-block">Watch Video</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative" data-dot="<img src='img/carousel-sm-3.jpg'>">
+                <img class="img-fluid" src="img/carousel-3.jpg" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h1 class="display-1 text-white animated slideInDown">Realizing Your Dream: Custom Wood Solutions</h1>
+                                <p class="fs-5 fw-medium text-white">Looking for something unique and personalized? At "Custom Shed", we offer a wide range of wooden solutions and combinations to meet your needs and fulfill even the boldest requests.</p>
+                                <div class="d-flex align-items-center pt-4 animated slideInDown">
+                                    <a href="" class="btn btn-primary py-sm-3 px-3 px-sm-5 me-5">Read More</a>
+                                    <button type="button" class="btn-play" data-bs-toggle="modal"
+                                        data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                                        <span></span>
+                                    </button>
+                                    <h5 class="text-white m-0 ms-4 d-none d-sm-block">Watch Video</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Video Modal Start -->
+    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- 16:9 aspect ratio -->
+                    <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                            allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+<!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="about-img">
+                        <img class="img-fluid" src="img/about-1.jpg" alt="">
+                        <img class="img-fluid" src="img/about-2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h4 class="section-title">About Us</h4>
+                    <h1 class="display-5 mb-4">Creating Elegance and Durability: Wooden Creations by Custom Shed LTD</h1>
+                    <p>With over 12 years of experience in Ireland and across Europe, "Custom Shed" has established itself as a leader in crafting modern wooden structures.</p>
+
+                    
+                    <p class="mb-4">Our expertise lies in creating wooden garden sheds, summer houses, and designer flower beds. We use high-quality treated wood to ensure durability and an exquisite appearance of our products. We guarantee that each project combines a unique style with reliability.</p>
+                    <div class="d-flex align-items-center mb-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center border border-5 border-primary" style="width: 120px; height: 120px;">
+                            <h1 class="display-1 mb-n2" data-toggle="counter-up">12</h1>
+                        </div>
+                        <div class="ps-4">
+                            <h3>Years</h3>
+                            <h3>Working</h3>
+                            <h3 class="mb-0">Experience</h3>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary">GET FREE QUOTE NOW</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Our Services</h4>
+                <h1 class="display-5 mb-4">Unique Design, Space Transformation, Artisanal Finishing</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/service-1.jpg" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="img/icons/icon-5.png" alt="Icon">
+                            <h3 class="mb-3">Architecture</h3>
+                            <p class="mb-4">At Custom Shed, we embrace each project's uniqueness. Our team specializes in designing custom wooden products, employing premium wood to create pieces that reflect our clients' personality and style. Each piece is a blend of art, functionality, and individuality.</p>
+                            <a class="btn" href="service-detail.html"><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/service-5.jpg" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="img/icons/icon-9.png" alt="Icon">
+                            <h3 class="mb-3">Transforming Spaces: From Old to New with Quality Assurance</h3>
+                            <p class="mb-4">We don't just build; we transform. Turn your old shed or unwanted structure into something spectacular with us. We dismantle the old and construct the new, ensuring aesthetic appeal and durability. With Custom Shed, uniqueness and top-quality are guaranteed.</p>
+                            <a class="btn" href="service-detail.html"><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex position-relative text-center h-100">
+                        <img class="bg-img" src="img/service-4.jpg" alt="">
+                        <div class="service-text p-5">
+                            <img class="mb-4" src="img/icons/icon-8.png" alt="Icon">
+                            <h3 class="mb-3">Diverse Finishing Options: Painting that Transforms</h3>
+                            <p class="mb-4">Our finishing creativity knows no bounds. Choose from a wide range of finishing and painting options to enhance your project's uniqueness. Our experts guide you to the perfect choice that aligns with your preferences and the overall design. With us, your project is not only functional but also aesthetically impeccable.</p>
+                            <a class="btn" href="service-detail.html"><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+    <!-- Project Start -->
+    <div class="container-xxl project py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Our Projects</h4>
+                <h1 class="display-5 mb-4">"We Focus on Modern Architecture, Interior, and Exterior Design"</h1>
+            </div>
+            <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4">
+                    <div class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4">
+                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active" data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
+                            <h3 class="m-0">01. Custom Shed "Daisies"</h3>
+                        </button>
+                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
+                            <h3 class="m-0">02.Custom Shed "Carnations"</h3>
+                        </button>
+                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
+                            <h3 class="m-0">03.Summer House "Lilies"</h3>
+                        </button>
+                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-0" data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
+                            <h3 class="m-0">04.Flower Lovers "Peonies"</h3>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="tab-content w-100">
+                        <div class="tab-pane fade show active" id="tab-pane-1">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/project-lg-1.jpg"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h1 class="mb-3">"Each of our projects is a benchmark of quality and craftsmanship, ensuring you exceptional durability and impeccable style."</h1>
+                                    <p class="mb-4">At Custom Shed, we merge high quality, stylish design, and durability. Our products, crafted by skilled artisans, stand out for their longevity, thanks to the use of quality materials and well-thought-out painting techniques.</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Quality</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Design</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i> Best</p>
+                                    <a href="service-detail.html" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab-pane-2">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/project-lg-2.jpg"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h1 class="mb-3">"Each of our projects is a benchmark of quality and craftsmanship, ensuring you exceptional durability and impeccable style."</h1>
+                                    <p class="mb-4">At Custom Shed, we merge high quality, stylish design, and durability. Our products, crafted by skilled artisans, stand out for their longevity, thanks to the use of quality materials and well-thought-out painting techniques.</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Quality</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Design</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i> Durability</p>
+                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab-pane-3">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/project-lg-3.jpg"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h1 class="mb-3">"Each of our projects is a benchmark of quality and craftsmanship, ensuring you exceptional durability and impeccable style."</h1>
+                                    <p class="mb-4">At Custom Shed, we merge high quality, stylish design, and durability. Our products, crafted by skilled artisans, stand out for their longevity, thanks to the use of quality materials and well-thought-out painting techniques.</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Quality</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Design</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i> Durability</p>
+                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab-pane-4">
+                            <div class="row g-4">
+                                <div class="col-md-6" style="min-height: 350px;">
+                                    <div class="position-relative h-100">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/project-lg-4.jpg"
+                                            style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h1 class="mb-3">"Each of our projects is a benchmark of quality and craftsmanship, ensuring you exceptional durability and impeccable style."</h1>
+                                    <p class="mb-4">At Custom Shed, we merge high quality, stylish design, and durability. Our products, crafted by skilled artisans, stand out for their longevity, thanks to the use of quality materials and well-thought-out painting techniques.</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Quality</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i>Design</p>
+                                    <p><i class="fa fa-check text-primary me-3"></i> Durability</p>
+                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Project End -->
+
+
+    <!-- Project Start -->
+    <div class="container-xxl project py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Our Projects</h4>
+                <h1 class="display-5 mb-4">Visit Our Latest Projects And Our Innovative Works</h1>
+            </div>
+            <div class="row g-0 project-items">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <a class="project-item" href="project-detail_walnut.html">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/project-md-1.jpg" alt="">
+                            <div class="project-text p-4">
+                                <p class="text-dark fw-bold mb-2">Custom Shed 8*10</p>
+                                <h3 class="mb-0">"Walnut</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="project-item" href="">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/project-lg-1.jpg" alt="">
+                            <div class="project-text p-4">
+                                <p class="text-dark fw-bold mb-2">Custom Shed 8*12</p>
+                                <h3 class="mb-0">"Magnolia"</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <a class="project-item" href="">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/project-lg-2.jpg" alt="">
+                            <div class="project-text p-4">
+                                <p class="text-dark fw-bold mb-2">Custom Shed 10*12</p>
+                                <h3 class="mb-0">"Maple"</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="project-item" href="">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/project-md-2.jpg" alt="">
+                            <div class="project-text p-4">
+                                <p class="text-dark fw-bold mb-2">Custom Shed 10*12</p>
+                                <h3 class="mb-0">"Fir"</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <a class="project-item" href="">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/project-md-3.jpg" alt="">
+                            <div class="project-text p-4">
+                                <p class="text-dark fw-bold mb-2">Custom Shed 10*12</p>
+                                <h3 class="mb-0">"Birch"</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="project-item" href="">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/project-lg-3.jpg" alt="">
+                            <div class="project-text p-4">
+                                <p class="text-dark fw-bold mb-2">Custom Shed 10*12</p>
+                                <h3 class="mb-0">"Palm"</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Project End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Testimonial</h4>
+                <h1 class="display-5 mb-4">Thousands Of Customers Who Trust Us And Our Services</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-1.jpg' alt=''>">
+                    <p class="fs-5">"We turned to 'Custom Shed' for building our new gazebo and were thrilled with the outcome. The team showed incredible attention to detail, and all our wishes were fully taken into account. 
+                        The work was completed on schedule, and the quality exceeded all our expectations. 
+                        Thank you for your professionalism and creative approach!"</p>
+                    <h3>Client Name:</h3>
+                    <span class="text-primary">Review from John and Emily</span>
+                </div>
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-2.jpg' alt=''>">
+                    <p class="fs-5">Impressed with the professionalism and quality of work from the 'Custom Shed' team. My new porch looks amazing! The entire process from design to installation was smooth, with constant communication and consideration of my preferences. 
+                        I recommend them to anyone looking for quality wooden structures."</p>
+                    <h3>Client Name:</h3>
+                    <span class="text-primary">Review from Michael: </span>
+                </div>
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-3.jpg' alt=''>">
+                    <p class="fs-5">"Choosing 'Custom Shed' to create our garden house was the best decision. A great team, responsive and talented people.
+                         Their unique approach to painting and finishing made our house truly special. Thank you for your hard work and attention to detail!"</p>
+                    <h3>Client Name:</h3>
+                    <span class="text-primary">Review from Alexey</span>
+                </div>
+            </div>      
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+                    <!-- Comment Form Start -->
+    <div class="bg-light p-4 p-md-5 wow fadeInUp" data-wow-delay="0.1s">
+        <h3 class="section-title text-dark mb-4">Leave A Comment</h3>
+        <form id="commentForm">
+            <div class="row g-3">
+                <div class="col-12 col-sm-6">
+                    <!-- Добавьте id="name" -->
+                    <input type="text" id="name" class="form-control bg-white border-0" placeholder="Your Name" style="height: 55px;">
+                </div>
+                <div class="col-12 col-sm-6">
+                    <!-- Добавьте id="email" -->
+                    <input type="email" id="email" class="form-control bg-white border-0" placeholder="Your Email" style="height: 55px;">
+                </div>
+                <div class="col-12">
+                    <!-- Добавьте id="comment" -->
+                    <textarea id="comment" class="form-control bg-white border-0" rows="5" placeholder="Comment"></textarea>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary w-100 py-3" type="submit">Leave Your Comment</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- Comment Form End -->
+
+    <!-- Modal for Confirmation of Submission -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Message Sent</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Your comment has been successfully submitted.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal End -->
+
+    <!-- Blog Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h4 class="section-title">Latest Blog</h4>
+                <h1 class="display-5 mb-4">Latest Architecture Articles From Our Blog Post</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="blog-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/blog-md-1.jpg" alt="">
+                        </div>
+                        <div class="bg-light p-4">
+                            <div class="breadcrumb blog-meta">
+                                <div class="breadcrumb-item"><a href="#">01 Jan, 2045</a></div>
+                                <div class="breadcrumb-item"><a href="#">Admin</a></div>
+                            </div>
+                            <a href="" class="d-block h3 mb-4">We have 25 years of experience in architecture industry</a>
+                            <a href="" class="btn btn-sm btn-outline-body px-3">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="blog-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/blog-md-2.jpg" alt="">
+                        </div>
+                        <div class="bg-light p-4">
+                            <div class="breadcrumb blog-meta">
+                                <div class="breadcrumb-item"><a href="#">01 Jan, 2045</a></div>
+                                <div class="breadcrumb-item"><a href="#">Admin</a></div>
+                            </div>
+                            <a href="" class="d-block h3 mb-4">We have 25 years of experience in architecture industry</a>
+                            <a href="" class="btn btn-sm btn-outline-body px-3">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="blog-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/blog-md-3.jpg" alt="">
+                        </div>
+                        <div class="bg-light p-4">
+                            <div class="breadcrumb blog-meta">
+                                <div class="breadcrumb-item"><a href="#">01 Jan, 2045</a></div>
+                                <div class="breadcrumb-item"><a href="#">Admin</a></div>
+                            </div>
+                            <a href="" class="d-block h3 mb-4">We have 25 years of experience in architecture industry</a>
+                            <a href="" class="btn btn-sm btn-outline-body px-3">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title text-light mb-4">Address</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Ireland, Drogheda</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+0000000</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>contact@customshed.ie</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-body me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="index.html">Home</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="service-details">Our Services</a>
+                    <a class="btn btn-link" href="contact.html">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title text-light mb-4">Newsletter</h4>
+                    <p>Want to Stay Updated on Discounts and New Arrivals? Subscribe Now!</p>
+                    <div class="position-relative">
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="customshed.ie">Custom Shed LTD</a>, All Right Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="lib/twentytwenty/jquery.event.move.js"></script>
+    <script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

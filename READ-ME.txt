@@ -1,0 +1,120 @@
+***** Custom Shed Project *****
+"All rights reserved. The photographs used on this site are the exclusive property of customshed.ie."
+
+
+*****.  Hello,
+
+I'm currently in the process of developing a website for Custom Shed, a company poised to make its mark on the market. 
+The site is still under construction, which means some sections aren't fully polished yet.
+ I'm actively refining the animations to enhance the user experience. 
+ Stay tuned for the finished product, which we aim to deliver to the highest standard very soon.
+
+*****
+
+website-root/
+│
+├── CSS/   └── [stylesheets] (This CSS script defines the main styling rules for a website. 
+    It sets up color variables for primary, secondary, light, and dark themes.
+    The script also specifies font weights for different header tags and classes,
+    creating a consistent typographical hierarchy.
+    There's styling for a back-to-top button, a loading spinner, and various button styles, 
+    including primary, secondary, square, and tag buttons.
+
+    The navbar, header, and other components like the carousel, modal video, page header,
+    and section titles are styled for a cohesive look.
+     Specific styling rules are applied to the facts, about, feature, and service sections for visual consistency. 
+    The script also includes detailed styling for project displays, skills, appointments, testimonials, coming soon pages, carousels, contact forms, and footers.
+
+    Each section is meticulously designed to ensure a visually appealing and user-friendly interface,
+    with responsive design considerations for different screen sizes.
+    Also use a Bootstrap libraries)
+
+│   
+│
+├── docs/
+│   └── [documents/ css/ js/ libraries].
+     ( CSS code defines the styling for a website template, 
+    focusing on interactive components like a back-to-top button, 
+    offcanvas menus, and a custom accordion. 
+    The .back-to-top class sets up a fixed button for easy navigation,
+    while .btn-offcanvas and .offcanvas-start style a sidebar menu.
+    The .btn-toggle is designed for a collapsible menu with a neat SVG arrow icon that rotates when expanded. 
+    The accordion component, under .accordion-custom,
+    features custom styling for its items and buttons,
+     including color changes and transitions for a more dynamic interaction. 
+    This code is essential for creating a user-friendly and visually appealing interface.)
+    
+    (Docs.js jQuery script enhances the user experience of a website by implementing several features:
+
+    Smooth Scrolling: When clicking on links in the offcanvas menu, the page scrolls smoothly to the linked section rather than jumping directly to it.
+     This is achieved with an animation that takes 1500 milliseconds, using the 'easeInOutExpo' easing function.
+    Back to Top Button: A button appears when the user scrolls down the page past a certain point (100 pixels).
+     Clicking this button smoothly scrolls the page back to the top, also using an easing animation.
+    Code Highlighting: The script processes text within <pre><code></code></pre> tags, trimming and reinserting it to format correctly.
+     Then, it applies syntax highlighting using the highlight.js library.
+    This script is designed to make the website more interactive and user-friendly, improving navigation and readability.)
+│   
+
+    (libraries/.  
+    Animate.css: This library provides a wide range of CSS animations, which can be easily applied to HTML elements to create engaging visual effects.
+    CounterUp: This is a jQuery plugin used to animate numbers. 
+    It's useful for statistics or counters where you want numbers to smoothly count up when they come into view on the page.
+    Easing: This library extends jQuery's built-in animation effects.
+     It offers additional easing functions, allowing for more sophisticated animations beyond the basic linear or swing animations available in jQuery.)
+
+
+├── img/
+│   └── [images]. (The photographs and logo for this project have been created using artificial intelligence,
+    showcasing the innovative capabilities of AI in graphic design. 
+    Additionally, the SketchUp program will be utilized in the near future to further enhance the project's design aspects. 
+    This integration of AI and advanced design software represents a cutting-edge approach to visual elements in web development.)
+│
+├── js/
+│   ├── main.js
+│   └── [other scripts and libraries] (WOW.js for Animations: Activates on-scroll animations for elements.
+    Sticky and Fixed Navbar: The navbar becomes fixed on scrolling past a certain point, with added shadow effects for better visibility.
+    Back-to-Top Button: A button that appears when scrolling down, allowing users to easily return to the top of the page.
+    Counter-Up Animation: Numerical values animate by counting up, adding a dynamic aspect to statistics or counters.
+    Date and Time Pickers: Widgets for users to select dates and times, enhancing form interactivity.
+    Progress Bar Animation: Progress bars animate when they enter the viewport, visually indicating progress.
+    Owl Carousel Implementations: Carousels for various sections like headers, testimonials, etc., for a sliding display of content.
+    Modal Video Management: Controls video playback within modal windows.
+    Image Comparison Tool: Allows side-by-side image comparison.
+    Form Handling: Manages comment and appointment forms, ensuring proper data submission with user feedback.
+    Each feature is designed to improve user interaction, making the website more engaging and functional.)
+│
+├── lib/
+│   └── [third-party libraries]
+│
+├── mail/
+│   └── [email scripts](Contact Form // /* jQuery script is for a contact form. When the form is submitted, 
+    it validates the input fields using jqBootstrapValidation. 
+    If the validation passes, it sends the form data (name, email, subject, message) 
+    to a PHP script (contact-form.php) via AJAX POST request.
+     On success, it displays a success message and resets the form. On failure, it shows an error message.
+     The script also re-enables the send button and updates its text after the AJAX call completes.
+    Additionally, it clears any alert messages when any form field is focused.*/
+    In addition to the previously mentioned features, the website also incorporates the bootstrapValidation.min.js library. 
+    This library is used to validate form data on the client side before it is submitted.
+     It ensures that all required fields are filled out correctly and that the email address provided is in the correct format.
+      This validation process enhances user experience by providing immediate feedback on the form inputs and helps prevent the submission of incorrect or incomplete data.
+
+    PHP script is designed to process a contact form. It first checks if the 'name', 'subject', 'message' 
+    fields are filled and the 'email' is valid. If any of these checks fail, 
+    it sends a 500 HTTP response code and exits. If the checks pass, 
+    it sanitizes the input data to prevent HTML and script injections.
+     The script then sets the recipient email, constructs the email subject 
+     and body with the provided information, and sets headers. 
+     Finally, it attempts to send the email using 
+     PHP's mail function and sends a 500 HTTP response code if the email sending fails.)
+│
+├── 404.html
+├── appointment.html (Page for setting up appointments)
+├── coming-soon.html (Placeholder for upcoming content)
+├── contact.html (Contact page with a form)
+├── index.html (main page, - Home page)
+├── project.html (Overview of projects)
+├── project-detail.html (Generic project details page)
+├── project-detail-walnut.html (Detailed page for the "walnut" project)
+└── service-detail.html ( Detailed page for services offered)
+

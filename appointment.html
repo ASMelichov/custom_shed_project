@@ -1,0 +1,340 @@
+""""Head Section:
+Sets character encoding to UTF-8.
+Page title is "Custom Sheds/ Appointment."
+Meta tags for viewport, keywords, and description are included (content not filled).
+Favicon link is provided.
+Google Web Fonts (Open Sans and Teko) are imported.
+Icon font stylesheets from Font Awesome and Bootstrap Icons are linked.
+Stylesheets for various libraries (animate.css, Owl Carousel, Tempus Dominus, TwentyTwenty) and Bootstrap are included.
+A main stylesheet for the website's custom styles is linked.
+Body Section:
+A loading spinner animation is included at the start.
+Topbar with contact information and social media links.
+A responsive navigation bar (navbar) with links to various site sections.
+A search modal is included for site-wide searching.
+A page header section with a background image and a title ("Appointment").
+The main content area for appointment booking includes:
+A description of the appointment booking process.
+Contact information with icons.
+A form for booking an appointment, which contains fields for name, email, mobile, service selection, date picker, time picker, and a message box.
+The form is set up but does not include action attributes, so form handling needs to be implemented in the backend or via JavaScript.
+Footer with contact information, quick links, newsletter subscription, and copyright notice.
+A back-to-top button.
+JavaScript libraries and scripts for functionality, including jQuery, Bootstrap, Tempus Dominus (for date and time picking), and custom scripts.
+Styling and Layout:
+The design uses a combination of custom styles and Bootstrap classes.
+The layout is responsive, ensuring it works well on different devices.
+The appointment form is structured to capture essential information from the user.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Custom Sheds/ Appointment</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="lib/twentytwenty/twentytwenty.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
+        <img class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-1.png" alt="Icon">
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-3">
+                    <a class="text-body px-2" href="tel:+0000000"><i class="fa fa-phone-alt text-primary me-2"></i>+00000000</a>
+                    <a class="text-body px-2" href="contact@customshed.ie"><i class="fa fa-envelope-open text-primary me-2"></i>contact@customshed.ie</a>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-2">
+                    <a class="text-body px-2" href="">Terms</a>
+                    <a class="text-body px-2" href="">Privacy</a>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+    <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+        <h1 class="text-primary m-0"><img class="me-3" src="img/icons/icon-1.png" alt="Icon">Made in Ireland</h1>
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Home</a>
+                <div class="dropdown-menu border-0 m-0">
+                    <a href="index.html" class="dropdown-item">Home</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Service</a>
+                <div class="dropdown-menu border-0 m-0">
+                    <a href="service-detail.html" class="dropdown-item">Service Detail</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Project</a>
+                <div class="dropdown-menu border-0 m-0">
+                    <a href="project.html" class="dropdown-item">Project</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <div class="dropdown-menu border-0 m-0">
+                    <a href="appointment.html" class="dropdown-item">Appointment</a>
+                    <a href="coming-soon.html" class="dropdown-item">Coming Soon</a>
+                    
+                </div>
+            </div>
+            <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+            <a href="#searchModal" class="nav-item nav-link" data-bs-toggle="modal"><i class="fa fa-search"></i></a>
+            <a href="#offcanvasRight" class="nav-item nav-link" data-bs-toggle="offcanvas" aria-controls="offcanvasRight"><i class="fa fa-bars"></i></a>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+
+    <!-- Search Start -->
+<div class="modal fade" id="searchModal" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content" style="background: rgba(17, 9, 2, 0.5);">
+            <div class="modal-header border-0">
+                <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex align-items-center justify-content-center">
+                <div class="input-group" style="max-width: 600px;">
+                    <input type="text" class="form-control bg-transparent border-light p-3" placeholder="wooden shed ">
+                    <button class="btn btn-light px-4" title="Search"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 p-0 wow fadeIn" data-wow-delay="0.1s" style="background-image: url(img/carousel-1.jpg);">
+        <div class="container-fluid page-header-inner py-5">
+            <div class="container py-5">
+                <h1 class="display-1 text-white animated slideInDown">Appointment</h1>
+                <nav aria-label="breadcrumb animated slideInDown">
+                    <ol class="breadcrumb text-uppercase mb-0">
+                        <li class="breadcrumb-item text-primary active" aria-current="page">Appointment</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+   <!-- Appointment Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <h4 class="section-title">Appointment</h4>
+                <h1 class="display-5 mb-4">Make An Appointment To Start Your Dream Project</h1>
+                <p class="mb-4">"Schedule a meeting with us to start realizing your dream project. We are ready to assist you at every stage – from the initial idea to its actual implementation. Our specialists will provide you with the necessary consultations and support to ensure your project is completed with quality and on time. Book your appointment today!"</p>
+                <div class="d-flex align-items-center my-2">
+                    <i class="fa fa-2x fa-phone-alt text-primary"></i>
+                    <div class="ms-4">
+                        <p class="mb-2">Call Us Now</p>
+                        <h3 class="mb-0">+000000</h3>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center my-2">
+                    <i class="fa fa-2x fa-envelope-open text-primary"></i>
+                    <div class="ms-4">
+                        <p class="mb-2">Mail Us Now</p>
+                        <h3 class="mb-0">info@customshed.ie</h3>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Правая колонка с формой -->
+            <form id="appointmentForm">
+                <div class="row g-3">
+                    <!-- Имя -->
+                    <div class="col-12 col-sm-6">
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" autocomplete="name" style="height: 55px;">
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="col-12 col-sm-6">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" autocomplete="email" style="height: 55px;">
+                    </div>
+            
+                    <!-- Мобильный телефон -->
+                    <div class="col-12 col-sm-6">
+                        <input type="text" class="form-control" name="mobile" id="mobile" placeholder="Your Mobile" autocomplete="tel" style="height: 55px;">
+                    </div>
+            
+                    <!-- Услуги -->
+                    <div class="col-12 col-sm-6">
+                        <select class="form-select" name="service" id="service" style="height: 55px;">
+                            <option selected>Choose Service</option>
+                            <option value="1">Future Project</option>
+                            <option value="2">Current Project</option>
+                            <option value="3">Completed Project</option>
+                        </select>
+                    </div>
+            
+                    <div class="col-12 col-sm-6">
+                        <div class="input-group date" id="datePicker" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#datePicker"/>
+                            <div class="input-group-append" data-target="#datePicker" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="col-12 col-sm-6">
+                        <div class="input-group time" id="timePicker" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#timePicker"/>
+                            <div class="input-group-append" data-target="#timePicker" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-clock"></i></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+            
+                    <!-- Сообщение -->
+                    <div class="col-12">
+                        <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" autocomplete="off"></textarea>
+                    </div>
+            
+                    <div class="col-12">
+                        <button class="btn btn-primary w-100 py-3" type="submit">Book Appointment</button>
+                    </div>
+                </div>
+            </form>
+            
+
+        
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title text-light mb-4">Address</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Ireland, Drogheda</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+0000000</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>contact@customshed.ie</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-body me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="index.html">Home</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="service-details">Our Services</a>
+                    <a class="btn btn-link" href="contact.html">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="section-title text-light mb-4">Newsletter</h4>
+                    <p>Want to Stay Updated on Discounts and New Arrivals? Subscribe Now!</p>
+                    <div class="position-relative">
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="customshed.ie">Custom Shed LTD</a>, All Right Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Подключение необходимых библиотек -->
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="lib/twentytwenty/jquery.event.move.js"></script>
+    <script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    
+</body>
+
+</html>
